@@ -1,22 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Details from './pages/Details';
+import { useDispatch } from 'react-redux';
+import { loadCountries } from './redux/countrySlice';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadCountries());
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar />
         <Routes>
-        {/* <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/details/:name">
-            <Details />
-          </Route> */}
+         <Route path="/" element={<Home />}/>
+         <Route path="/details/:name" element={<Details />}/>  
         </Routes>
-      </BrowserRouter>
     </div>
   );
 }
