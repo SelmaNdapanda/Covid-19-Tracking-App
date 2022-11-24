@@ -8,7 +8,7 @@ const Navbar = (props) => {
   if (title !== 'All Countries cases') {
     return (
       <div className="d-flex justify-content-between align-items-center navbar">
-        <NavLink to="/" exact>{left}</NavLink>
+        <NavLink to="/">{left}</NavLink>
         <p>{title}</p>
         <div className="fs-4">
           <MdMic className="me-3" />
@@ -29,12 +29,12 @@ const Navbar = (props) => {
   );
 };
 
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  left: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]).isRequired,
-};
+// Navbar.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   left: PropTypes.oneOfType([
+//     PropTypes.string,
+//     PropTypes.element,
+//   ]).isRequired,
+// };
 
 export default Navbar;

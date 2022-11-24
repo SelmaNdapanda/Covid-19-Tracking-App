@@ -20,10 +20,10 @@ const Details = () => {
     <div>
       {country && (
         <div>
-          <Navbar title={country.country} left={<FaLessThan />} />
+          <Navbar title={country.Country} left={<FaLessThan />} />
           <div className="d-flex align-items-center justify-content-evenly px-2 py-3 main-card">
-            {/* <img src={covid} alt="covid virus" className="map w-25 h-25" /> */}
-            <TotalCard name={country.country} total={country.TotalConfirmed} />
+            {/* <img src={covid} alt="covid virus" className="map w-25 h-25" />  */}
+            <TotalCard name={country.Country} total={country.TotalConfirmed} />
           </div>
           <div className="d-flex align-items-center justify-content-around filter">
             <p>COUNTRY BREAKDOWN</p>
@@ -35,27 +35,27 @@ const Details = () => {
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h3>New Confirmed</h3>
-              <p>{country.NewConfirmed.toLocaleString()}</p>
+              <p>{country.NewConfirmed}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h3>New Deaths</h3>
-              <p>{country.NewDeaths.toLocaleString()}</p>
+              <p>{country.NewDeaths}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h3>Total Deaths</h3>
-              <p>{country.TotalDeaths.toLocaleString()}</p>
+              <p>{country.TotalDeaths}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h3>New Recovered</h3>
-              <p>{country.NewRecovered.toLocaleString()}</p>
+              <p>{country.NewRecovered}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h4>Total Recovered</h4>
-              <p>{country.TotalRecovered.toLocaleString()}</p>
+              <p>{country.TotalRecovered}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h3>Date</h3>
-              <p>{country.Date.toLocaleString()}</p>
+              <p>{country.Date}</p>
             </ListGroup.Item>
           </ListGroup>
         </div>

@@ -9,8 +9,8 @@ const TotalCard = (prop) => {
       <Card.Title>{name}</Card.Title>
       <Card.Body>
         <Card.Text className="d-flex flex-column">
-          <span>{total.toLocaleString()}</span>
-          Confirmed Cases
+          <span>{total}</span>
+          Total Confirmed Cases
         </Card.Text>
       </Card.Body>
     </Card>
