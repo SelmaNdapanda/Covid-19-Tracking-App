@@ -9,57 +9,58 @@ import { loadCountries } from '../redux/countrySlice';
 import covid from '../assets/covid.svg';
 
 const Details = () => {
-  const country = useSelector((state) => state);
+  const country = useSelector((state) => state.countries);
   const { name } = useParams();
+  console.log(country)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadCountries(name));
   }, [dispatch, name]);
-console.log(country)
+
   return (
     <div>
-      {country && (
+      {country && country.countries?.Countries?.filter((item) => item.Country === name).map((country)=> (
         <div>
-          <Navbar title={country.countries.Countries.Country} left={<FaLessThan />} />
+          <Navbar className="nav" title={country.Country} left={<FaLessThan />} />
           <div className="d-flex align-items-center justify-content-evenly px-2 py-3 main-card">
-            <img src={covid} alt="covid virus" className="map w-25 h-25" />  
-            <TotalCard name={country.countries.Countries.Country} totalCases={country.countries.Countries.TotalConfirmed} />
+            <img src={covid} alt="covid virus" className="map w-25 h-25" /> 
+            <TotalCard name={country.Country} total={country.TotalConfirmed} />
           </div>
           <div className="d-flex align-items-center justify-content-around filter">
-            <p>COUNTRY BREAKDOWN</p>
+            <p className="stats">COUNTRY BREAKDOWN</p>
           </div>
           <ListGroup as="ul" className="text-light">
           <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h3>Country Code</h3>
-              <p>{country.countries.Countries.CountryCode}</p>
+              <h4>Country Code</h4>
+              <p>{country.CountryCode}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h3>New Confirmed</h3>
-              <p>{country.countries.Countries.NewConfirmed}</p>
+              <h4>New Confirmed</h4>
+              <p>{country.NewConfirmed}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h3>New Deaths</h3>
-              <p>{country.countries.Countries.NewDeaths}</p>
+              <h4>New Deaths</h4>
+              <p>{country.NewDeaths}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h3>Total Deaths</h3>
-              <p>{country.countries.Countries.TotalDeaths}</p>
+              <h4>Total Deaths</h4>
+              <p>{country.TotalDeaths}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h3>New Recovered</h3>
-              <p>{country.countries.Countries.NewRecovered}</p>
+              <h4>New Recovered</h4>
+              <p>{country.NewRecovered}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
               <h4>Total Recovered</h4>
-              <p>{country.countries.Countries.TotalRecovered}</p>
+              <p>{country.TotalRecovered}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h3>Date</h3>
-              <p>{country.countries.Countries.Date}</p>
+              <h4>Date</h4>
+              <p>{country.Date}</p>
             </ListGroup.Item>
           </ListGroup>
         </div>
-      )}
+      ))}
     </div>
   );
 };

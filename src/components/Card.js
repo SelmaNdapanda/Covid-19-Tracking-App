@@ -1,24 +1,20 @@
-import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import { FiArrowRightCircle } from 'react-icons/fi';
-import covid from '../assets/covid.svg';
 
 const CountryCard = ({ country, totalCases }) => {
-  const page = `/details/${country.Country}`;
+  const page = `/details/${country}`;
 
   return (
     <Card key={country.Country} className="card border-0 p-2 country-card">
       <Card.Link href={page}>
         <div className="d-flex justify-content-between ps-3">
-          <img src={covid} alt="covid virus" className="map w-20 h-20" /> 
           <FiArrowRightCircle />
         </div>
         <div className="text-end">
           <Card.Title>{country.Country}</Card.Title>
           <Card.Body>
-            <Card.Text>
-              {country},
-              {totalCases}
+            <Card.Text className="card-text">
+              {country} {' '} {totalCases}
             </Card.Text>
           </Card.Body>
         </div>
@@ -26,14 +22,5 @@ const CountryCard = ({ country, totalCases }) => {
     </Card>
   );
 };
-
-// CountryCard.propTypes = {
-//   country: PropTypes.shape({
-//     All: PropTypes.shape({
-//       country: PropTypes.string,
-//       TotalConfirmed: PropTypes.number,
-//     }),
-//   }).isRequired,
-// };
 
 export default CountryCard;
