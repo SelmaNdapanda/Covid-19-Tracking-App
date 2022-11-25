@@ -34,19 +34,9 @@ body {
   background-color: var(--pink);
 }
 
-.dropdown,
-.dropdown:hover {
+.country-card:hover {
   background-color: var(--pink);
-  border: none;
-  outline: none;
-}
-
-.show > .btn-primary.dropdown-toggle,
-.show > .btn-primary.dropdown-toggle:focus,
-.btn-primary:focus {
-  background-color: var(--pink);
-  box-shadow: 0 0 0 0 var(--pink);
-  border: none;
+  border: 1px solid #0000;
 }
 
 a,
@@ -90,4 +80,41 @@ li:nth-child(even) {
 .country-card:nth-child(4n + 2),
 .country-card:nth-child(4n + 3) {
   background-color: var(--dark-pink);
+}
+
+.country-card:nth-child(4n + 1),
+.country-card:nth-child(4n + 4) {
+  background-color: var(--light-pink);
+}
+
+.text-end {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.stats,
+p,
+nav {
+  padding-top: 15px;
+}
+
+.stats {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.total-card,
+.flex-column,
+.card-body {
+  background-color: var(--light-pink);
+}
+
+.d-flex,
+h4,
+p
+ {
+  color: #ffff;
+  justify-content: center;
+  text-decoration: none;
 }
