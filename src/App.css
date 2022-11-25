@@ -1,38 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --pink: #f03f83;
+  --dark-pink: #ec4c8a;
+  --light-pink: #fc5193;
+}
+
+*,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--pink);
+}
+
+.card {
+  margin: 2px;
+  width: 48.7%;
+}
+
+.card,
+.main-card {
+  background-color: var(--light-pink);
+}
+
+.h5 {
+  font-weight: 700;
+}
+
+.filter {
+  background-color: var(--pink);
+}
+
+.country-card:hover {
+  background-color: var(--pink);
+  border: 1px solid #0000;
+}
+
+a,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .App {
-  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  padding: 10px;
+  background-color: var(--pink);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.map {
+  opacity: 0.3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-body {
+  padding: 0;
+  flex: none;
+}
+
+li:nth-child(odd) {
+  background-color: var(--light-pink);
+}
+
+li:nth-child(even) {
+  background-color: var(--dark-pink);
+}
+
+.list-group-item {
+  color: white;
+  border: none;
+  padding: 20px 10px;
+}
+
+.country-card:nth-child(4n + 2),
+.country-card:nth-child(4n + 3) {
+  background-color: var(--dark-pink);
+}
+
+.country-card:nth-child(4n + 1),
+.country-card:nth-child(4n + 4) {
+  background-color: var(--light-pink);
+}
+
+.text-end {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-decoration: none;
+}
+
+.stats,
+p,
+nav {
+  padding-top: 15px;
+}
+
+.stats {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.total-card,
+.flex-column,
+.card-body {
+  background-color: var(--light-pink);
+}
+
+.d-flex,
+h4,
+p
+ {
+  color: #ffff;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-decoration: none;
 }
