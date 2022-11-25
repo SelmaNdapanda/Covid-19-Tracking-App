@@ -10,7 +10,7 @@ const CountryCard = ({ country, totalCases }) => {
     <Card key={country.Country} className="card border-0 p-2 country-card">
       <Card.Link href={page}>
         <div className="d-flex justify-content-between ps-3">
-          <img src={covid} alt="covid virus" className="map w-50 h-50" /> 
+          <img src={covid} alt="covid virus" className="map w-20 h-20" /> 
           <FiArrowRightCircle />
         </div>
         <div className="text-end">
