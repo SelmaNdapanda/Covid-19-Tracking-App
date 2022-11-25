@@ -64,15 +64,7 @@ const slice = createSlice({
       .addCase(loadCountries.fulfilled, (state, action) => {
         const IsSucessful = state;
         IsSucessful.status = 'success';
-        IsSucessful.countries = action.payload;
-
-        // const countryData = [];
-        // action.payload.map((country) => countryData.push({
-        //   id: country.ID,
-        //   country: country.Country,
-        //   cases: country.TotalConfirmed,
-        // }));
-        // IsSucessful.countries = countryData; 
+        IsSucessful.countries = action.payload
       })
       .addCase(loadCountries.rejected, (state) => {
         const IsRejected = state;

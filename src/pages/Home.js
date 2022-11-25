@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import CountryCard from '../components/Card';
 import TotalCard from '../components/TotalCard';
 import Filter from '../components/Filter';
-// import world from '../assets/world.svg';
+import world from '../assets/world.svg';
 
 const Home = () => {
   const countries = useSelector((state) => state.countries);
@@ -14,7 +14,7 @@ const Home = () => {
   let total = 0;
   if (countries) {
     countries.countries?.Countries?.forEach((element) => {
-      // console.log(element);
+  
       total += element.TotalConfirmed;
     });
   }
@@ -33,7 +33,7 @@ const Home = () => {
       <Navbar title="All Countries cases" left="2022" />
       <div>
         <div className="d-flex align-items-center justify-content-evenly px-2 py-3 main-card">
-          {/* <img src={world} alt="world map" className="map w-25 h-25" /> */}
+        <img src={world} alt="world map" className="map w-25 h-25" /> 
           <TotalCard name="COUNTRIES" total={total} className="fs-2" />
         </div>
         <div className="d-flex align-items-center justify-content-around filter">
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <div className="d-flex flex-wrap">
           {countries && countries.countries?.Countries?.map((country) => (
-            <CountryCard key={country.ID} country={country.Country} />
+            <CountryCard key={country.ID} country={country.Country} totalCases={country.TotalConfirmed}/>
           ))}
         </div>
       </div>
