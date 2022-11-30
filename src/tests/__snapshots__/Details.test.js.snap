@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home component should rendered correctly 1`] = `
+exports[`Details component should rendered correctly 1`] = `
 Object {
   "debug": [Function],
   "findAllByAltText": [Function],

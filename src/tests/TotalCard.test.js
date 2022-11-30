@@ -1,12 +1,11 @@
-import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import TotalCard from '../components/TotalCard';
 
-describe('Filter component', () => {
-  test('Snapshot test', () => {
-    const totalCard = renderer.create(
+describe('Card component', () => {
+  test('should rendered correctly', () => {
+    render(
       <TotalCard name="COUNTRIES" total="638547623" />,
     )
-      .toJSON();
-    expect(totalCard).toMatchSnapshot();
+    expect(screen).toMatchSnapshot();
   });
 });

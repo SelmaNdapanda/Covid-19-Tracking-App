@@ -1,12 +1,11 @@
-import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import CountryCard from '../components/Card';
 
-describe('Filter component', () => {
-  test('Snapshot test', () => {
-    const totalCard = renderer.create(
-      <CountryCard country={{ Country: { country: 'Algeria', totalCases: '271050' } }} />,
+describe('Card component', () => {
+  test('should rendered correctly', () => {
+    render(
+      <CountryCard country="Algeria" totalCases="271050" />,
     )
-      .toJSON();
-    expect(totalCard).toMatchSnapshot();
+    expect(screen).toMatchSnapshot();
   });
 });
