@@ -10,7 +10,7 @@ const CountryCard = ({ country, totalCases }) => {
         <div className="d-flex justify-content-between ps-3">
           <FiArrowRightCircle />
         </div>
-        <div className="text-end">
+        <div className="text-end d-flex">
           <Card.Title>{country.Country}</Card.Title>
           <Card.Body>
             <Card.Text className="card-text">

@@ -31,31 +31,31 @@ const Details = () => {
           </div>
           <ListGroup as="ul" className="text-light">
           <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>Country Code</h4>
+              <h4>Country Code:</h4>
               <p>{country.CountryCode}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>New Confirmed</h4>
+              <h4>New Confirmed:</h4>
               <p>{country.NewConfirmed}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>New Deaths</h4>
+              <h4>New Deaths:</h4>
               <p>{country.NewDeaths}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>Total Deaths</h4>
+              <h4>Total Deaths:</h4>
               <p>{country.TotalDeaths}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>New Recovered</h4>
+              <h4>New Recovered:</h4>
               <p>{country.NewRecovered}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>Total Recovered</h4>
+              <h4>Total Recovered:</h4>
               <p>{country.TotalRecovered}</p>
             </ListGroup.Item>
             <ListGroup.Item as="li" className="d-flex justify-content-between align-items-center">
-              <h4>Date</h4>
+              <h4>Date:</h4>
               <p>{country.Date}</p>
             </ListGroup.Item>
           </ListGroup>

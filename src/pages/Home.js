@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { loadCountries, filterCountry } from "../redux/countrySlice";
+import { loadCountries } from "../redux/countrySlice";
 import Navbar from '../components/Navbar';
 import CountryCard from '../components/Card';
 import TotalCard from '../components/TotalCard';
@@ -37,7 +37,7 @@ const Home = () => {
             type="text"
             value={myin}
             onChange={(e)=>setMyin(e.target.value.trim())}
-            placeholder="my search"
+            placeholder="My Search"
           />
         </div>
         <div className="d-flex flex-wrap">
