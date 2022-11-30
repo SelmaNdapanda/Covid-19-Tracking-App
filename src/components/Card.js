@@ -14,7 +14,11 @@ const CountryCard = ({ country, totalCases }) => {
           <Card.Title>{country.Country}</Card.Title>
           <Card.Body>
             <Card.Text className="card-text">
-              {country} {' '} {totalCases}
+              {country}
+              {' '}
+              {' '}
+              {' '}
+              {totalCases}
             </Card.Text>
           </Card.Body>
         </div>
