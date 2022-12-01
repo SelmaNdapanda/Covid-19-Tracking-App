@@ -90,7 +90,7 @@ li:nth-child(even) {
 .card-text {
   display: flex;
   flex-direction: column;
-  text-decoration-line: none;
+  text-decoration: none;
   font-size: 20px;
 }
 
