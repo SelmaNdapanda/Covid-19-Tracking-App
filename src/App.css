@@ -90,9 +90,8 @@ li:nth-child(even) {
 .card-text {
   display: flex;
   flex-direction: column;
-  text-decoration-line: none;
+  text-decoration: none;
   font-size: 20px;
-  
 }
 
 .stats,
@@ -114,8 +113,7 @@ nav {
 
 .d-flex,
 h4,
-p
- {
+p {
   color: #ffff;
   justify-content: center;
   text-decoration: none;

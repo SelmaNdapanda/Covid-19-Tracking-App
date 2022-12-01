@@ -1,8 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const apiURL = "https://api.covid19api.com/summary";
-const LOAD_COUNTRIES = "LOAD_COUNTRIES";
+const apiURL = 'https://api.covid19api.com/summary';
+const LOAD_COUNTRIES = 'LOAD_COUNTRIES';
 
 const initialState = {
   countries: [],
@@ -18,11 +18,11 @@ export const loadCountries = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
-  }
+  },
 );
 
 const slice = createSlice({
-  name: "countries",
+  name: 'countries',
   initialState,
   reducers: {},
   extraReducers(builder) {
@@ -34,7 +34,7 @@ const slice = createSlice({
       .addCase(loadCountries.fulfilled, (state, action) => {
         const IsSucessful = state;
         IsSucessful.status = 'success';
-        IsSucessful.countries = action.payload
+        IsSucessful.countries = action.payload;
       })
       .addCase(loadCountries.rejected, (state) => {
         const IsRejected = state;

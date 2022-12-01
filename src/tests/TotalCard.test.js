@@ -5,7 +5,7 @@ describe('Card component', () => {
   test('should rendered correctly', () => {
     render(
       <TotalCard name="COUNTRIES" total="638547623" />,
-    )
+    );
     expect(screen).toMatchSnapshot();
   });
 });

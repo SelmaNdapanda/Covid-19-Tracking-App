@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import { FiArrowRightCircle } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 
 const CountryCard = ({ country, totalCases }) => {
   const page = `/details/${country}`;
@@ -14,13 +15,22 @@ const CountryCard = ({ country, totalCases }) => {
           <Card.Title>{country.Country}</Card.Title>
           <Card.Body>
             <Card.Text className="card-text">
-              {country} {' '} {totalCases}
+              {country}
+              {' '}
+              {' '}
+              {' '}
+              {totalCases}
             </Card.Text>
           </Card.Body>
         </div>
       </Card.Link>
     </Card>
   );
+};
+
+CountryCard.propTypes = {
+  country: PropTypes.string.isRequired,
+  totalCases: PropTypes.number.isRequired,
 };
 
 export default CountryCard;

@@ -11,8 +11,8 @@ const loadCountriesFulfilled = {
 };
 // when it's rejected
 const loadCountriesRejected = {
-    type: loadCountries.rejected,
-}
+  type: loadCountries.rejected,
+};
 
 describe('testing Country Slice', () => {
   test('When it pending state.status should have pending value', () => {

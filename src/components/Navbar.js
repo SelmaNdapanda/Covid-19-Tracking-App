@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdMic, MdSettings } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Navbar = (props) => {
   const { title, left } = props;
@@ -26,6 +27,14 @@ const Navbar = (props) => {
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  left: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]).isRequired,
 };
 
 export default Navbar;
