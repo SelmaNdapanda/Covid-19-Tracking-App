@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-- [Website Link](https://covid19-tracking-app1.netlify.app/)
+- [Live Link](https://covid19-tracking-app1.netlify.app/)
 - [Video Link](https://www.loom.com/share/75b42815526240a098ebf58b8e478366)
 
 ## Getting Started
